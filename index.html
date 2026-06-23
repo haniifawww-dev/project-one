@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Manajemen Sekolah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>EduManage</h1>
+        <p>Dashboard Sekolah</p>
+      </div>
+      <nav class="nav-menu">
+        <a class="nav-item active" href="#">Dashboard</a>
+        <a class="nav-item" href="#">Siswa</a>
+        <a class="nav-item" href="#">Guru</a>
+        <a class="nav-item" href="#">Kelas</a>
+        <a class="nav-item" href="#">Nilai</a>
+        <a class="nav-item" href="#">Kehadiran</a>
+        <a class="nav-item" href="#">Pengumuman</a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>Admin | SMP Negeri 1</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2>Dashboard Sekolah</h2>
+          <p>Ringkasan operasional harian sekolah Anda</p>
+        </div>
+        <div class="user-card">
+          <span class="user-avatar">AD</span>
+          <div>
+            <strong>Admin</strong>
+            <small>Manajemen Sekolah</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="overview-cards">
+        <article class="card">
+          <h3>Siswa Terdaftar</h3>
+          <p class="card-value" id="studentsCount">1.250</p>
+          <span class="card-note">Pertumbuhan 4% dari minggu lalu</span>
+        </article>
+        <article class="card">
+          <h3>Guru & Staf</h3>
+          <p class="card-value" id="staffCount">72</p>
+          <span class="card-note">10 guru baru aktif</span>
+        </article>
+        <article class="card">
+          <h3>Kelas Aktif</h3>
+          <p class="card-value" id="classesCount">34</p>
+          <span class="card-note">Termasuk ekstrakurikuler</span>
+        </article>
+        <article class="card">
+          <h3>Kehadiran Hari Ini</h3>
+          <p class="card-value" id="attendanceRate">92%</p>
+          <span class="card-note">Siswa masuk tepat waktu</span>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Statistik Kehadiran</h3>
+            <button class="btn-small">Lihat Detail</button>
+          </div>
+          <div class="attendance-chart" id="attendanceChart">
+            <div class="bar" data-value="95"><span>Sen</span></div>
+            <div class="bar" data-value="92"><span>Sel</span></div>
+            <div class="bar" data-value="90"><span>Rab</span></div>
+            <div class="bar" data-value="93"><span>Kam</span></div>
+            <div class="bar" data-value="91"><span>Jum</span></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Pengumuman Terbaru</h3>
+          </div>
+          <ul class="announcement-list">
+            <li>
+              <strong>Senam pagi</strong>
+              <p>Jadwal senam pagi fakultatif setiap Senin dan Rabu di lapangan.</p>
+            </li>
+            <li>
+              <strong>Pembagian raport</strong>
+              <p>Raport semester 2 akan dibagikan pada 28 Juni 2026.</p>
+            </li>
+            <li>
+              <strong>Rapat orang tua</strong>
+              <p>Rapat wali murid kelas 7-9 dijadwalkan Kamis pagi.</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="content-grid small-grid">
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Aktivitas Terbaru</h3>
+          </div>
+          <ol class="activity-list">
+            <li>Absensi kelas 8A berhasil disimpan.</li>
+            <li>Jadwal ekstrakurikuler basket telah diperbarui.</li>
+            <li>Nilai UTS Matematika kelas 9 telah dimasukkan.</li>
+          </ol>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Agenda Minggu Ini</h3>
+          </div>
+          <ul class="agenda-list">
+            <li><strong>27 Jun</strong> - Simulasi UKK</li>
+            <li><strong>29 Jun</strong> - Lomba kebersihan kelas</li>
+            <li><strong>01 Jul</strong> - Pentas seni sekolah</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
