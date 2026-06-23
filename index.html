@@ -14,13 +14,34 @@
         <p>Dashboard Sekolah</p>
       </div>
       <nav class="nav-menu">
-        <a class="nav-item active" href="#">Dashboard</a>
-        <a class="nav-item" href="#">Siswa</a>
-        <a class="nav-item" href="#">Guru</a>
-        <a class="nav-item" href="#">Kelas</a>
-        <a class="nav-item" href="#">Nilai</a>
-        <a class="nav-item" href="#">Kehadiran</a>
-        <a class="nav-item" href="#">Pengumuman</a>
+        <a class="nav-item active" href="#">
+          <span class="nav-icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">🎓</span>
+          <span>Daftar Siswa</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">👩‍🏫</span>
+          <span>Daftar Guru</span>
+        </a>
+        <div class="nav-dropdown">
+          <button class="nav-item dropdown-toggle" type="button" aria-expanded="false">
+            <span class="nav-icon">✍️</span>
+            <span>Penginputan</span>
+            <span class="dropdown-chevron">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Input Nilai</a>
+            <a class="dropdown-item" href="#">Input Data Siswa</a>
+            <a class="dropdown-item" href="#">Input Data Guru</a>
+          </div>
+        </div>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">📝</span>
+          <span>Penerimaan Siswa Baru</span>
+        </a>
       </nav>
       <div class="sidebar-footer">
         <p>Admin | SMP Negeri 1</p>

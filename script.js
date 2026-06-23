@@ -4,8 +4,6 @@ chartBars.forEach(bar => {
   const value = Number(bar.dataset.value || 0);
   const height = Math.max(14, Math.min(100, value));
   bar.style.setProperty('--bar-height', `${height}%`);
-  bar.querySelector('span').textContent = `${bar.querySelector('span').textContent}`;
-  bar.style.setProperty('--bar-number', value);
   bar.style.height = '100%';
   bar.style.position = 'relative';
   const fill = document.createElement('div');
@@ -30,3 +28,13 @@ document.getElementById('studentsCount').textContent = stats.students.toLocaleSt
 document.getElementById('staffCount').textContent = stats.staff;
 document.getElementById('classesCount').textContent = stats.classes;
 document.getElementById('attendanceRate').textContent = `${stats.attendance}%`;
+
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (dropdownToggle && dropdownMenu) {
+  dropdownToggle.addEventListener('click', () => {
+    const isOpen = dropdownMenu.classList.toggle('show');
+    dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
