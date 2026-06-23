@@ -29,12 +29,14 @@ document.getElementById('staffCount').textContent = stats.staff;
 document.getElementById('classesCount').textContent = stats.classes;
 document.getElementById('attendanceRate').textContent = `${stats.attendance}%`;
 
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-if (dropdownToggle && dropdownMenu) {
-  dropdownToggle.addEventListener('click', () => {
-    const isOpen = dropdownMenu.classList.toggle('show');
-    dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+dropdownToggles.forEach(toggle => {
+  const menu = toggle.nextElementSibling;
+  if (!(menu instanceof HTMLElement)) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('show');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
-}
+});
